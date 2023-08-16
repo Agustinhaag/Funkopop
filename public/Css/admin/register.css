@@ -1,5 +1,3 @@
-
-
 main{
     height: 70%;
     display:block ;
@@ -28,8 +26,7 @@ main form .container-input{
 }
 main form .container-input label{
     display: flex;
-   flex-direction: column;
-   
+   flex-direction: column;   
 }
 main form .container-input input{
 margin-top: 15px ;
@@ -50,7 +47,6 @@ main form .container-input .tres{
 main form .container-input .cuatro{
     margin-left: 50px;
 }
-
 main form .btn button{
     background: #FF3333;
     color: white;
@@ -68,7 +64,6 @@ main form .btn{
     font-weight: 300;
     margin-bottom: 2%;
 }
-
 main form .btn .parent > input{
     margin-right: 8px;
     margin-top: 10px;
@@ -81,16 +76,13 @@ main form .btn .parent > span a{
 main form .btn .parent> span a:hover{
     text-decoration: underline 1px solid #1D84B5;
 }
-
-
 @media(max-width:630px){
     main{
         height: 85vh;
     }
     main form .container-input{
         margin: 15px 0 15px 22%;
-    }
-  
+    } 
 }
 @media(max-width:403px){
     main form .container-input{

@@ -49,7 +49,6 @@ main form .container-btn button{
 main form .container-btn button:hover{
     background: rgb(255, 38, 0);
 }
-
 main form .container-btn input{
     margin-right: 9px;
     cursor: pointer;
@@ -59,7 +58,6 @@ main form .container-btn span{
     margin-top: 8px;
     font-weight: 300;
 }
-
 main > a{
     text-decoration: none;
     color: #1D84B5;

@@ -1,6 +1,3 @@
-
-
-
 main{
     height: 100%;
 padding-top: 100px;
@@ -17,7 +14,6 @@ main .busqueda input{
     padding: 3px 0;
 }
 main .title{
-    
     display: flex;
 }
 main .title h2{
@@ -26,8 +22,7 @@ main .title h2{
     font-size: 23px;
    display: inline-block;
    margin: 0 545px 20px 0;
-   font-weight: 600;
-   
+   font-weight: 600;   
 }
 main .title .boton{
  display: inline-block;
@@ -53,7 +48,6 @@ main table{
     text-align: left;
     margin-right: 20px;
 }
-
 main table tr th{
     padding-bottom:15px ;
 }
@@ -70,9 +64,6 @@ main table tr td .fa-trash-can{
     color: #FF3333;
     cursor: pointer;
 }
-
-
-
 @media(max-width:1200px){
 main{
     height: 120vh;

@@ -108,13 +108,11 @@ section .container-section-img a img {
   min-height: 200px;
   padding-top: 11%;
 }
-
 section .container .border2 {
   width: 97%;
   border-bottom: 2px solid #ff3333;
   margin-bottom: 10px;
 }
-
 .catalogo {
   height: 100%;
   margin: 0 auto 40px auto;
@@ -144,7 +142,6 @@ section .container .border2 {
   border: none;
   margin-right: 2px;
 }
-
 .catalogo .contenedor-indicadores .indicadores button:hover,
 .catalogo .contenedor-indicadores .indicadores button.activo {
   background: red;
@@ -253,7 +250,6 @@ background: #ff3333;
   color: #1d84b5;
   margin-right: 25px;
 }
-
 @media (max-width: 768px) {
   main{
     padding-top: 65px;
@@ -341,7 +337,6 @@ background: #ff3333;
     margin-top: 10%;
   }
 }
-
 @media (max-width: 500px) {
   .catalogo
     .contenedor-principal

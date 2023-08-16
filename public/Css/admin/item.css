@@ -1,13 +1,6 @@
-
-.dimensiones{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .section{
     display: flex;
 margin: 15vh 0 10px 120px;
-
 }
 .section .container-section-img{
     width: 50%;
@@ -76,7 +69,6 @@ margin: 65px 0 0 0;
     height:26px ;
     margin:0 0 4% 2%;
     cursor: pointer;
-    
 }
 .section .containeritem .container-text .parrafo-dos{
     color: #1D84B5;
@@ -86,7 +78,6 @@ margin: 65px 0 0 0;
     text-decoration: 1px underline #1D84B5 ;
     cursor: pointer;
 }
-
 .catalogo{
     height: 100%;
    margin:0 auto 40px auto ;
@@ -116,7 +107,6 @@ margin: 65px 0 0 0;
     border: none;
     margin-right: 2px;
 }
-
 .catalogo .contenedor-indicadores .indicadores button:hover, .catalogo .contenedor-indicadores .indicadores button.activo{
     background: red;
 }
@@ -218,8 +208,6 @@ background: #ff3333;
     padding: 0% 0 0 1%;
     color: #1D84B5;
 }
-
-
 @media(max-width:768px) {
 
     .section{
@@ -235,22 +223,18 @@ background: #ff3333;
        justify-content: center;
        align-items: center;
        margin: 0;
-    }
-  
+    } 
     .section .container-section-img img{
-       width: 260px;
-       
+       width: 260px;  
     }
     .section .containeritem {
         width: 100%;
     text-align: center;
     margin: 0 0 9% 0;
-   
     }
     .section .containeritem .container-text .text{
         margin-left: 23%;
     }
-
     .catalogo{
         margin: 10% 0;
         text-align: center;
