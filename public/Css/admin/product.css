@@ -1,0 +1,80 @@
+
+
+
+main{
+    height: 100%;
+padding-top: 100px;
+}
+main .busqueda{
+    margin: 20px 0;
+}
+main .busqueda i{
+   margin-right: 10px;
+   cursor: pointer;
+}
+main .busqueda input{
+    width: 35%;
+    padding: 3px 0;
+}
+main .title{
+    
+    display: flex;
+}
+main .title h2{
+    color: #1F1F1F;
+    font-family: 'Raleway', sans-serif;
+    font-size: 23px;
+   display: inline-block;
+   margin: 0 545px 20px 0;
+   font-weight: 600;
+   
+}
+main .title .boton{
+ display: inline-block;
+}
+main .title .boton span{
+    color: #000000;
+    font-size: 14px;
+    margin-right: 8px;
+    font-weight: 600;
+}
+main .title .boton button{
+    width: 24px;
+    background: #FF3333;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+}
+main .title .boton button i{
+    color: white;
+}
+main table{
+    width: 100%;
+    text-align: left;
+    margin-right: 20px;
+}
+
+main table tr th{
+    padding-bottom:15px ;
+}
+main table tr td{
+   color: #1F1F1F;
+    font-weight: 300;
+    padding: 0 50px 13px 0;
+}
+main table tr td .fa-pen{
+    color: #1D84B5;
+    cursor: pointer;
+}
+main table tr td .fa-trash-can{
+    color: #FF3333;
+    cursor: pointer;
+}
+
+
+
+@media(max-width:1200px){
+main{
+    height: 120vh;
+}
+}

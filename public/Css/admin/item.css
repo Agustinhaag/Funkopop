@@ -1,0 +1,281 @@
+
+.dimensiones{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section{
+    display: flex;
+margin: 15vh 0 10px 120px;
+
+}
+.section .container-section-img{
+    width: 50%;
+    display: flex;
+ justify-content: center;
+}
+.section .container-section-img  img{
+    width: 75%;
+    display: flex;
+}
+.section .containeritem{
+  justify-content: center;
+   display: flex;
+   height: 50vh;
+width: 50%;
+margin: 65px 0 0 0;
+}
+.section .containeritem .container-text .parrafo-uno{
+    color: #333333;
+    font-size: 14px;
+    margin-bottom: 2%;
+}
+.section .containeritem .container-text .title{
+    color: #111111;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 3%;
+}
+.section .containeritem .container-text .text{
+    width: 69%;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 3%;
+}
+.section .containeritem .container-text .precio{
+    color: #333333;
+    font-size: 30px;
+    font-weight: 100;
+    margin-bottom: 4%;
+}
+.section .containeritem .container-text .contenedor-btn .chico{
+    width: 28px;
+    height: 26px;
+    margin-right: 3px;
+    cursor: pointer;
+}
+.section .containeritem .container-text .contenedor-btn .input{
+    cursor: default;
+    text-align: center;
+}
+.section .containeritem .container-text .contenedor-btn input::placeholder{
+    text-align: center;
+}
+.oscuro{
+    background: #4F4F4F;
+    border: none;
+    color: white;
+}
+.section .containeritem .container-text .contenedor-btn .btn_carrito{
+    width: 140px;
+    text-decoration: none;
+    background: #FF3333;
+    color: white;
+    border: none;
+    height:26px ;
+    margin:0 0 4% 2%;
+    cursor: pointer;
+    
+}
+.section .containeritem .container-text .parrafo-dos{
+    color: #1D84B5;
+    font-size: 14px;
+}
+.section .containeritem .container-text .parrafo-dos label{
+    text-decoration: 1px underline #1D84B5 ;
+    cursor: pointer;
+}
+
+.catalogo{
+    height: 100%;
+   margin:0 auto 40px auto ;
+    display: flex;
+     align-items: center;
+    flex-direction: column;
+    background:  #ffffff;
+}
+.catalogo h2{
+    font-size: 26px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+.catalogo .contenedor-indicadores {
+  display: flex;
+  width: 100%;
+ justify-content: flex-end;
+}
+.catalogo .contenedor-indicadores .indicadores{
+  margin-right: 10px;
+}
+.catalogo .contenedor-indicadores .indicadores button{
+    background: rgb(100, 100, 100);
+    height: 4px;
+    width: 13px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.catalogo .contenedor-indicadores .indicadores button:hover, .catalogo .contenedor-indicadores .indicadores button.activo{
+    background: red;
+}
+.catalogo .contenedor-principal{
+        display: flex;
+        width: 100%;
+    align-items: center;
+    position: relative;
+    padding: 40px 0;
+}
+.catalogo .contenedor-principal .flecha-izquierda, .catalogo .contenedor-principal .flecha-derecha{
+       position: absolute;
+    border: none;
+    box-shadow: 0.3px 0.3px 8px rgb(204, 204, 204);
+    background:rgb(255, 255, 255);
+    font-size: 12px;
+    top: calc(50% -25%);
+   height: 6%;
+    width: 30px;
+    color: rgb(0, 0, 0);
+    z-index: 400;
+    transition: .2s;
+} 
+.catalogo .contenedor-principal .flecha-izquierda{
+    left: 0;
+}
+.catalogo .contenedor-principal .flecha-derecha{
+    right: 0;
+}
+.catalogo .contenedor-principal .flecha-izquierda:hover, .catalogo .contenedor-principal .flecha-derecha:hover{
+box-shadow: 0.3px 0.3px 8px rgb(0, 0, 0);
+cursor: pointer;
+}
+.catalogo .contenedor-principal .contenedor-proyecto{
+    width: 100%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.catalogo .contenedor-principal .contenedor-proyecto .container-carrusel{
+    display: flex;
+    margin-top: 2%;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+.catalogo .contenedor-principal .contenedor-proyecto .container-carrusel .carrusel{
+    background: #ffffff;
+     text-align: center;
+     min-width: 33.3333%;
+     scroll-snap-align: start;
+}
+.catalogo .container-carrusel .carrusel .cartel{
+    position: relative;
+    }
+    .catalogo .container-carrusel .carrusel .cartel p{
+        position: absolute;
+        background: #FF3333;
+        color: white;
+        top: 0;
+        right: 0;
+        font-size: 10px;
+        padding: 5px 13px;
+    }
+.catalogo .container-carrusel .carrusel img{
+    width: 70%;
+    cursor: pointer;
+}
+.catalogo .container-carrusel .carrusel .title-cash{
+    font-size: 13px;
+    text-align: left;
+    padding:3% 0% 3% 1%;
+    color: #333333;
+}
+.catalogo .container-carrusel .carrusel .name{
+    font-size: 1em;
+    text-align: left;
+    padding-left: 1%;
+}
+.catalogo .container-carrusel .carrusel .item{
+  display: flex;
+  justify-content: space-between;
+}
+.catalogo .container-carrusel .carrusel .item a{
+  text-decoration: none;
+background: none;
+  border: 1px solid #ff3333;
+  color: #ff3333;
+padding: 2px 12px 0 12px ;
+height: 25px;
+font-size: 14px;
+margin-right: 50px;
+border-radius: 5px;
+}
+.catalogo .container-carrusel .carrusel .item a:hover{
+  color: white;
+background: #ff3333;
+}
+.catalogo .container-carrusel .carrusel .cuotas{
+    padding: 0% 0 0 1%;
+    color: #1D84B5;
+}
+
+
+@media(max-width:768px) {
+
+    .section{
+         height: 100%;
+        display: block;
+        flex-direction: column;
+        margin:15vh 0 0 0;
+    }
+    .section .container-section-img{
+        width: 100%;
+       display: flex;
+       text-align: center;
+       justify-content: center;
+       align-items: center;
+       margin: 0;
+    }
+  
+    .section .container-section-img img{
+       width: 260px;
+       
+    }
+    .section .containeritem {
+        width: 100%;
+    text-align: center;
+    margin: 0 0 9% 0;
+   
+    }
+    .section .containeritem .container-text .text{
+        margin-left: 23%;
+    }
+
+    .catalogo{
+        margin: 10% 0;
+        text-align: center;
+        height: 100%;
+    }
+    .catalogo h2{
+        font-size: 20px;
+        margin: 20px 0;
+    }
+   .catalogo .contenedor-principal .contenedor-proyecto .container-carrusel .carrusel h2{
+    font-size: 12px;
+   }
+   .catalogo .contenedor-principal .contenedor-proyecto .container-carrusel .carrusel .cartel p{
+    padding: 3px 7px;
+    font-size: 8px;
+   }
+    .catalogo .container-carrusel .carrusel img{
+        min-width: 90px;
+    }
+    .catalogo .container-carrusel .carrusel .title-cash, .catalogo .container-carrusel .carrusel .name, .catalogo .container-carrusel .carrusel .cuotas{
+        text-align: center;
+    }
+}
+@media(max-width:500px){
+.catalogo .contenedor-principal .contenedor-proyecto .container-carrusel .carrusel{
+   min-width: 50%;
+}
+}

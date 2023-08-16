@@ -1,0 +1,143 @@
+
+
+<title>Edit</title>
+<link rel="stylesheet" href="Css/admin/edit.css"/>
+  <main class="dimensiones">
+    <%if( typeof errors != "undefined"){ errors.forEach(error=>{ %>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <%= error.msg %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<% })} %>
+    <h1>EDITAR ITEM</h1>
+    <form id="form" action="/product?_method=PUT" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="id" value="<%= values.id %>">
+      <div class="contenedor">
+        <div class="grupo1">
+          <div class="parent">
+            <span>Categoría:</span>
+            <select name="categoria_id" id="categoria">
+              <option value=""></option>
+              <% categorias.forEach(categoria=>{ %>
+      <option value="<%= categoria.id %>" <%= values.categoria_id==categoria.id ? 'selected' : '' %> > <%=categoria.name %> </option>
+      <% }) %>
+            </select>
+            <div class="input"></div>
+          </div>
+        </div>
+        <div class="grupo1">
+          <div class="parent">
+            <span>Licencia:</span>
+            <select name="licencia" id="licencia">
+              <option value="<%=values.licencia%>" selected><%=values.licencia%></option>
+              <option value="">Extendida</option>
+              <option value="">Comercial</option>
+            </select>
+            <div class="input"></div>
+          </div>
+        </div>
+      </div>
+      <div class="contenedor-input">
+        <div class="parent">
+          <span>Nombre del producto:</span>
+          <input
+            type="text"
+            id="name"
+            placeholder="Kakashi Hatake Shippuden Saga"
+            name="name"
+            value="<%=values.name%>"
+          />
+          <div class="input"></div>
+        </div>
+      </div>
+      <div class="text-area">
+        <div class="parent">
+          <textarea
+            name="descripcion"
+            placeholder="Descripción del producto"
+            id="descripcion"
+            cols="30"
+            rows="10"
+          ><%=values.descripcion%></textarea>
+          <div class="input"></div>
+
+        </div>
+      </div>
+      <div class="contenedor-grupo">
+        <div class="grupo2">
+          <div class="parent">
+            <span>SKU</span>
+            <input placeholder="SSK111AB001" id="sku" value="<%=values.codigo%>" name="codigo" type="text" />
+            <div class="input"></div>
+
+          </div>
+        </div>
+        <div class="grupo2">
+          <div class="parent">
+            <span>Precio</span>
+            <input placeholder="$ 0.000,00" value="<%=values.precio%>" name="precio" id="precio" type="text" />
+            <div class="input"></div>
+      
+          </div>
+        </div>
+        <div class="grupo2">
+          <div class="parent">
+            <span>Stock:</span>
+            <input class="stock" name="stock" value="<%=values.stock%>" placeholder="0" id="stock" type="text" />
+            <div class="input"></div>
+       
+          </div>
+        </div>
+      </div>
+      <div class="contenedor-span">
+        <div class="grupo3">
+          <div class="parent">
+            <span>Descuento:</span>
+            <input
+              class="descuento"
+              id="descuento"
+              name="descuento"
+              placeholder="0%"
+              type="text"
+              value="<%=values.descuento%>"
+            />
+            <div class="input"></div>
+          </div>
+        </div>
+        <div class="grupo4">
+          <div class="parent">
+            <span>Cuotas:</span>
+            <select name="cuotas" id="cuotas">
+              <option  value="<%=values.cuotas%>" selected><%=values.cuotas%></option>
+              <option value="">3 Cuotas sin interés</option>
+              <option value="">6 Cuotas sin interés</option>
+            </select>
+            <div class="input"></div>
+          </div>
+        </div>
+      </div>
+      <div class="contenedor-img">
+        <span>Imágenes:</span>
+        <input type="file" name="image" id="img" />
+        <img class="mt-2" src="/Uploads/<%=values.image%>" width="100" alt="<%=values.name%>"> 
+      </div>
+      <div class="contenedor-muestra">
+        <div class="img">
+          <img src="Uploads/file/hermione-1.webp" alt="" />
+          <p>Frente</p>
+        </div>
+        <div class="img">
+          <img src="Uploads/file/hermione-box.webp" alt="" />
+          <p>Dorso</p>
+        </div>
+      </div>
+      <div class="btn">
+        <button type="submit">Modificar Producto</button>
+      </div>
+    </form>
+  </main>

@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="Css/admin/home.css" />
+<title>Funkshop</title>
+<body >
+  <main>
+    <div class="banner">
+      <div class="containerbanner">
+        <h2>Nuevos ingresos</h2>
+        <p>Descubri el próximo funko pop de tu colección</p>
+        <a href="/shop"><button class="shop">SHOP</button></a>
+      </div>
+    </div>
+    <section class="section dimensiones">
+      <div class="container">
+        <div class="container-text">
+          <h2>STAR WARS &</h2>
+          <h2>THE MANDALORIAN</h2>
+          <p>
+            Disfruta de una saga que sigue agregando personajes a su colección
+          </p>
+        </div>
+        <div class="border1"></div>
+        <a href="/item/1">VER COLECCIÓN</a>
+      </div>
+      <div class="container-section-img">
+        <a href="/item/1"
+          ><img src="Uploads/file/baby-yoda-1.webp" alt="baby-yoda" title="baby-yoda"
+        /></a>
+      </div>
+    </section>
+    <section class="section dimensiones">
+      <div class="container-section-img2 container-section-img">
+        <a href="/item/11"
+          ><img src="Uploads/file/vulpix-1.webp" alt="baby-yoda" title="baby-yoda"
+        /></a>
+      </div>
+      <div class="container">
+        <div class="container-text">
+          <h2>POKEMON INDIGO</h2>
+          <p>
+            Atrapa todos los que puedas y disfruta de una colección llena de
+            amigos
+          </p>
+        </div>
+        <div class="border2"></div>
+        <a href="/item/11">VER COLECCIÓN</a>
+      </div>
+    </section>
+    <section class="section dimensiones">
+      <div class="container">
+        <div class="container-text">
+          <h2>HARRY POTTER</h2>
+          <p>Revive los recuerdos de una saga llena de magia y encanto</p>
+        </div>
+        <div class="border1"></div>
+        <a href="/item/12">VER COLECCIÓN</a>
+      </div>
+      <div class="container-section-img">
+        <a href="/item/12"
+          ><img
+            src="Uploads/file/harry-1.webp"
+            alt="harry"
+            title="harry"
+        /></a>
+      </div>
+    </section>
+    <div class="borde"></div>
+    <section class="catalogo dimensiones">
+      <h2>PRODUCTOS RELACIONADOS</h2>
+      <div class="contenedor-indicadores">
+        <div class="indicadores"></div>
+      </div>
+      <div class="contenedor-principal">
+        <button id="flecha-izquierda" class="flecha-izquierda">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="contenedor-proyecto">
+          <div class="container-carrusel">
+            <%productos.forEach(product=>{ %>
+             <div class="carrusel">
+                <div class="cartel">
+                  <img src="Uploads/<%=product.image%>" alt="<%=product.name%>" />
+                  <p>NUEVO</p>
+                </div>
+                <% categorias.forEach(categoria=>{ if(categoria.id === product.categoria_id){ %>
+            <p class="title-cash"><%=categoria.name%></p>
+            <% }}) %>
+                <h2 class="name"><%=product.name%></h2>
+                <p class="title-cash">$ <%=product.precio%>.-</p>
+                <div class="item">
+                <p class="cuotas">3 cuotas sin interés</p>
+                <a href="/item/<%=product.id%>" class="">Ver más</a>
+              </div>
+              </div>
+             <% })%>  
+          </div>
+        </div>
+        <button id="flecha-derecha" class="flecha-derecha">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+  </main>
+</body>
+ <script src="js/index.js"></script>

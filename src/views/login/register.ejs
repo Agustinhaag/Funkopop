@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="Css/admin/register.css">
+<title>Registro</title>
+
+<%if( typeof errors != "undefined"){ errors.forEach(error=>{ %>     
+<div class="alert alert-danger alert-dismissible fade show" role="alert">  
+  <%= error.msg %>                                                        
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% })} %>
+
+ <main>
+      <h2>CREA TU CUENTA</h2>
+      <p>Completa el formulario para ser parte del mundo de los Funkos</p>
+      <form id="form" action="/register" method="post">
+        <div class="container-input">
+          <div class="parent">
+            <label for=""></label>Nombre:
+            <input id="name" name="name" value="<%=values.name%>" placeholder="Juan" class="uno" type="text" />
+            <div class="input"></div>
+          </div>
+          <div class="parent">
+            <label for=""></label>Apellido:
+            <input id="surname" name="apellido" value="<%=values.apellido%>" placeholder="Perez" class="dos" type="text" />
+            <div class="input"></div>
+          </div>
+          <div class="parent">
+            <label for=""></label>Email:
+            <input
+              id="user"
+              name="email"
+              placeholder="juanperez@gmail.com"
+              class="tres"
+              type="email"
+              value="<%=values.email%>"
+            />
+            <div class="input"></div>
+          </div>
+          <div class="parent">
+            <label for=""></label>Contraseña:
+            <input
+              id="password"
+              name="password"
+              placeholder="*******"
+              class="cuatro"
+              type="password"
+            />
+            <div class="input"></div>
+          </div>
+          <div class="parent">
+            <label for=""></label>Repita Contraseña:
+            <input
+              id="password2"
+              name="password2"
+              placeholder="*******"
+              class="cinco"
+              type="password"
+            />
+            <div class="input"></div>
+          </div>
+        </div>
+        <div class="btn">
+          <button type="submit">Registrar</button>
+          <div class="parent">
+            <input type="checkbox" name="check" id="check" /><span>
+              Acepto<a href="#">Términos y Condiciones</a></span>
+            <div class="input"></div>
+          </div>
+        </div>
+      </form>
+    </main>

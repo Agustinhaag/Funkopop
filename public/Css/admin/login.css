@@ -1,0 +1,89 @@
+main{
+    height: 50vh;
+    text-align: center; 
+    margin-top: 143px;
+}
+main h2{
+    margin-bottom: 12px;
+    color: #1F1F1F;
+    font-size: 21px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
+main form{
+    margin: 27px;
+}
+main form label{
+display: flex;
+flex-direction: column;
+margin-bottom: 15px;
+}
+main form input{
+    border: none;
+    margin-left: 18px;
+    font-weight: 300;
+    outline: none;
+    border-bottom: 1px solid #FF3333;
+}
+main form .uno{
+    margin-left: 62px;
+}
+main form .container-btn{
+    margin: 34px 0 20px 0;
+    font-size: 14px;
+    color: #1F1F1F;
+    display: flex;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+main form .container-btn button{
+    margin-right:1.5% ;
+    background: #FF3333;
+    border: none;
+    color: white;
+    width: 85px;
+    height: 32px;
+    cursor: pointer;
+}
+main form .container-btn button:hover{
+    background: rgb(255, 38, 0);
+}
+
+main form .container-btn input{
+    margin-right: 9px;
+    cursor: pointer;
+    margin-bottom: 1px;
+}
+main form .container-btn span{
+    margin-top: 8px;
+    font-weight: 300;
+}
+
+main > a{
+    text-decoration: none;
+    color: #1D84B5;
+}
+main > a:hover{
+    text-decoration: underline #1D84B5;
+}
+main .register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .register a{
+    margin-left: 9px;
+}
+@media(max-width:450px){
+    .container-menu a{
+    font-size: 13px;
+    }
+    main h2{
+        font-size: 20px;
+    }
+}
+
+
+
+

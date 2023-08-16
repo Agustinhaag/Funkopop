@@ -1,0 +1,51 @@
+
+
+<link rel="stylesheet" href="Css/admin/login.css" />
+<title>Login</title>
+
+<main>
+  <%if( typeof errors != "undefined"){ errors.forEach(error=>{ %>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <%= error.msg %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<% })} %>
+  <h2>INGRESAR A MI CUENTA</h2>
+  <form id="form" action="/login" method="post">
+    <div class="parent">
+      <label for=""></label>Email:<input
+        class="uno"
+        type="email"
+        name="email"
+        id="user"
+        value="<%= values.email %>"
+      />
+      <div class="input"></div>
+      <small></small>
+    </div>
+    <div class="parent">
+      <label for="password"></label>Contraseña:<input
+        type="password"
+        name="password"
+        id="password"
+      />
+      <div class="input"></div>
+      <small></small>
+    </div>
+    <div class="container-btn">
+      <button type="submit">Ingresar</button>
+      <input type="checkbox" name="" id="" /><span>Recordarme</span>
+    </div>
+  </form>
+  <a href="#">Olvidé mi contraseña</a>
+
+  <div class="register">
+    <p class="mt-3">¿Aún no tiene una cuenta?</p>
+    <a href="/register" class="btn btn-sm btn-outline-primary">Registrarse</a>
+  </div>
+</main>

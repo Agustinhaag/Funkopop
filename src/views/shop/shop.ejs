@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="Css/admin/shop.css" />
+<title>Shop</title>
+<main class="dimensiones">
+  <div class="form">
+    <form action="">
+      <label for="buscar">BUSCAR</label>
+      <input
+        type="text"
+        placeholder="item o categoría"
+        class="input"
+        name="buscar"
+      />
+      <label for="">ORDENAR POR</label>
+      <select name="" id="" class="select">
+        <option value="Default"></option>
+        <option value="Mayor">Mayor</option>
+        <option value="Menor">Menor</option>
+      </select>
+      <div class="container-input">
+        <label for="precio">PRECIO</label>
+        <div class="minmax">
+          MIN
+          <input type="text" name="precio" id="" class="min" placeholder="0" />
+          MAX
+          <input type="text" name="precio" id="" class="min" placeholder="0" />
+        </div>
+      </div>
+      <div class="container-check">
+        <label for="">FILTRAR</label>
+        <div class="check">
+          <label for=""> <input type="checkbox" name="" id="" />NUEVOS</label>
+          <label for=""><input type="checkbox" name="" id="" />OFERTAS</label>
+          <label for="">
+            <input type="checkbox" name="" id="" />EDICIÓN ESPECIAL</label
+          >
+          <label for="">
+            <input type="checkbox" name="" id="" />FAVORITOS</label
+          >
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="container-section">
+    <section class="catalogo">
+      <div class="container-carrusel">
+        <% productos.forEach(producto=>{ %>
+        <a class="enlace" href="/item/<%=producto.id%>">
+          <div class="carrusel">
+            <div class="cartel">
+              <img
+                src="/Uploads/<%=producto.image%>"
+                alt="<%=producto.name%>"
+              />
+              <p>NUEVO</p>
+            </div>
+            <% categorias.forEach(categoria=>{ if(categoria.id ===
+            producto.categoria_id){ %>
+            <p class="title-cash"><%=categoria.name%></p>
+            <% }}) %>
+            <h2 class="name"><%=producto.name%></h2>
+            <div class="container-info">
+              <p class="title-cash">$ <%=producto.precio%>.-</p>
+              <p class="cuotas">3 cuotas sin interés</p>
+            </div>
+            <a  class="btn btn-sm btn-outline-primary" id="<%=producto.id%>">Carrito</a>
+          </div>
+        </a>
+        <% }) %>
+      </div>
+    </section>
+    <div class="botones">
+      <button class="btns flecha">
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+      <button id="btn" class="btns">1</button>
+      <button class="btns">2</button>
+      <button class="btns">...</button>
+      <button class="btns">9</button>
+      <button class="btns">10</button>
+      <button class="btns flecha">
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+    </div>
+  </div>
+</main>
+<script  defer src="js/shop.js"></script>
+<script type="module" defer src="js/carrito/index.js"></script>

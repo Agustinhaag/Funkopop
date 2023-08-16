@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="Css/admin/item.css" />
+<title>Item</title>
+<main>
+  <section class="section dimensiones">
+    <div class="container-section-img">
+      <img src="/Uploads/<%=producto.image%>" alt="<%=producto.name%>" />
+    </div>
+    <div class="containeritem">
+      <div class="container-text">
+        <% categorias.forEach(categoria=>{ if(categoria.id ===
+        producto.categoria_id){ %>
+        <p class="parrafo-uno"><%=categoria.name%></p>
+        <% }}) %>
+        <h2 class="title"><%=producto.name%></h2>
+        <p class="text"><%=producto.descripcion%></p>
+        <h2 class="precio">$ <%=producto.precio%>.-</h2>
+        <div class="contenedor-btn">
+              <button class="chico oscuro" id="menos">-</button>
+          <input
+            class="chico input"
+            id="cantidad"
+            placeholder="0"
+            type="text"
+          />
+          <button class="chico oscuro" id="mas">+</button>
+          <button class="btn_carrito">Agregar al Carrito</button>
+        </div>
+        <p class="parrafo-dos">
+          <label for=""> Ver métodos de pago</label> - 3 CUOTAS SIN INTERÉS
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="catalogo dimensiones">
+    <h2>PRODUCTOS RELACIONADOS</h2>
+    <div class="contenedor-indicadores">
+      <div class="indicadores"></div>
+    </div>
+    <div class="contenedor-principal">
+      <button id="flecha-izquierda" class="flecha-izquierda">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="contenedor-proyecto">
+        <div class="container-carrusel">
+          <%productos.forEach(product=>{ %>
+          <div class="carrusel">
+            <div class="cartel">
+              <img src="Uploads/<%=product.image%>" alt="<%=product.name%>" />
+              <p>NUEVO</p>
+            </div>
+            <% categorias.forEach(categoria=>{ if(categoria.id ===
+            product.categoria_id){ %>
+            <p class="title-cash"><%=categoria.name%></p>
+            <% }}) %>
+            <h2 class="name"><%=product.name%></h2>
+            <p class="title-cash">$ <%=product.precio%>.-</p>
+            <div class="item">
+              <p class="cuotas">3 cuotas sin interés</p>
+              <a href="/item/<%=product.id%>" class="">Ver más</a>
+            </div>
+          </div>
+          <% })%>
+        </div>
+      </div>
+      <button id="flecha-derecha" class="flecha-derecha">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+</main>
+<script defer src="js/item.js"></script>
+
+

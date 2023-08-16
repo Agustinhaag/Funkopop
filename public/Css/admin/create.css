@@ -1,0 +1,137 @@
+
+
+main{
+    height: 100%;
+    padding: 100px 0 30px 0 ;
+    width: 100%;
+}
+main h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 26px; 
+    margin: 2% 0 1.6% 0;
+}
+main .contenedor{
+display: flex;
+width: 90%;
+}
+main .contenedor .grupo1{
+    display: flex;
+    width: 42%;
+    margin-bottom: 2.5%;
+    align-items: center;
+}
+main .contenedor .grupo1 span{
+font-weight: 600;
+margin-right: 20px;
+}
+main .contenedor .grupo1 .parent{
+    width: 100%;
+}
+main .contenedor .grupo1 select{
+    width: 63%;
+    outline: none;
+   padding: 6px 0;
+}
+main .contenedor-input{
+    margin-bottom:2% ;
+}
+main .contenedor-input span{
+font-weight: 600;
+margin-right: 2px;
+}
+main .contenedor-input input{
+    border: none;
+    width: 16.5%;
+    outline: none;
+    border-bottom:  1px solid #FF3333;
+}
+main .text-area{
+    margin-bottom: 3%;
+}
+main .text-area textarea{
+    width: 71%;
+    outline: none;
+}
+main .contenedor-grupo{
+margin-bottom: 3%;
+display: flex;
+width: 100%;
+font-weight: 300;
+}
+main .contenedor-grupo .grupo2 span{
+    margin-right: 3px;
+    font-weight: 600;
+}
+main .contenedor-grupo .grupo2 input{
+    border: none;
+    border-bottom:  1px solid #FF3333;
+    width: 49%;
+    margin-right: 24%;
+    outline: none;
+}
+main .contenedor-grupo .grupo2 input::placeholder, main .contenedor-span .grupo3 .descuento{
+    text-align: center;
+}
+main .contenedor-grupo .grupo2 .stock{
+    width: 20%;
+}
+main .contenedor-span{
+  display: flex;
+  width: 80%;
+  margin-bottom:3%;
+  font-weight: 300;
+}
+main .contenedor-span .grupo3{
+    width: 20%;
+}
+main .contenedor-span span{
+    font-weight: 600;
+}
+main .contenedor-span .grupo3 .descuento{
+    width: 19%;
+    border: none;
+    outline: none;
+    border-bottom:  1px solid #FF3333;
+}
+main .contenedor-span .grupo4 {
+    width: 70%;
+}
+main .contenedor-span .grupo4 select{
+padding: 6px 0 ;
+width: 60%;
+outline: none;
+max-height: 35px;
+}
+main .contenedor-img{
+    margin-bottom: 2.5%;
+    font-weight: 600;
+}
+main .btn {
+  padding: 0;
+  display: flex;
+}
+main .btn button{
+    background: #FF3333;
+    padding: 1% 0;
+    text-align: center;
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    margin-right: 10px;
+    
+}
+main .btn button:hover{
+    background: #f70000;
+    cursor: pointer;
+}
+
+
+@media(max-width:1100px) {
+
+.dimensiones{
+    margin: 0 0 0 10%;
+}
+}
+
+

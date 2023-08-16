@@ -1,0 +1,126 @@
+
+
+main{
+    height: 70%;
+    display:block ;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin: 28px 0 0 0;
+}
+main h2{
+    color: #000000;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+main p{
+    color: #313131;
+    font-size: 17px;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+}
+main form .container-input{
+    max-width: 800px ;
+    margin: 15px 0 15px 37%;
+    text-align: left;
+    font-weight: 300;
+}
+main form .container-input label{
+    display: flex;
+   flex-direction: column;
+   
+}
+main form .container-input input{
+margin-top: 15px ;
+margin-bottom: 15px;
+border: none;
+outline: none;
+border-bottom: 1px solid #FF3333;
+}
+main form .container-input .uno{
+    margin-left: 76px;
+}
+main form .container-input .dos{
+    margin-left: 76px;
+}
+main form .container-input .tres{
+    margin-left: 95px;
+}
+main form .container-input .cuatro{
+    margin-left: 50px;
+}
+
+main form .btn button{
+    background: #FF3333;
+    color: white;
+    cursor: pointer;
+    width: 85px;
+    height: 32px;
+    border: none;
+    margin-right: 30px;
+    margin-bottom: 1%;
+}
+main form .btn button:hover{
+    background: rgb(255, 38, 0);
+}
+main form .btn{
+    font-weight: 300;
+    margin-bottom: 2%;
+}
+
+main form .btn .parent > input{
+    margin-right: 8px;
+    margin-top: 10px;
+}
+main form .btn .parent > span a{
+    text-decoration: none;
+    color: #1D84B5;
+    margin-left:4px;
+}
+main form .btn .parent> span a:hover{
+    text-decoration: underline 1px solid #1D84B5;
+}
+
+
+@media(max-width:630px){
+    main{
+        height: 85vh;
+    }
+    main form .container-input{
+        margin: 15px 0 15px 22%;
+    }
+  
+}
+@media(max-width:403px){
+    main form .container-input{
+        margin: 15px 0 15px 5%;
+    }
+    main p{
+        font-size: 16px;
+    }
+    main .btn label{
+        font-size: 14px;
+    }
+    main form .container-input{
+        font-size: 13px;
+    }
+    main form .btn button{
+        margin-right: 10px;
+    }
+    main form .btn > span{
+        font-size: 12px;
+    }
+    main form .container-input input{
+        width: 45%;
+    }
+    main form .container-input .cuatro{
+        margin-left: 55px;
+    }
+    main form .container-input .cinco{
+        margin-left: 14px;
+    }
+}
+
+
+

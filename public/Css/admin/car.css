@@ -1,0 +1,71 @@
+main {
+  padding-top: 100px;
+}
+.container-table {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+table {
+  width: 50%;
+}
+tbody{
+  height: 10vh;
+}
+thead tr {
+  background-color: #30343f;
+  color: white;
+}
+tfoot tr {
+  background-color: #30343f;
+  color: white;
+  font-weight: 600;
+}
+#tablehead {
+  padding: 10px;
+}
+tbody tr:nth-child(even) {
+  background: rgba(173, 216, 230, 0.252) !important;
+}
+td,
+th {
+  text-align: center;
+}
+.borrar:hover {
+  cursor: pointer;
+  color: red;
+}
+.container-btn {
+  margin: 15px auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.container-btn a {
+  color: white;
+  background-color: #ff3333;
+  font-size: 14px;
+  padding: 3px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.container-btn a:hover {
+  background: none;
+  color: #ff3333;
+  border: 1px solid #ff3333;
+}
+#btnComprar {
+  background: none;
+  font-size: 14px;
+  border: 1px solid #ff3333;
+  color: #ff3333;
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+#btnComprar:hover {
+  color: white;
+  cursor: pointer;
+  background-color: #ff3333;
+}

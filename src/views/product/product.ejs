@@ -1,0 +1,65 @@
+<title>Productos</title>
+<link rel="stylesheet" href="Css/admin/product.css" />
+<main class="dimensiones">
+  <div class="busqueda">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" placeholder="Código, nombre o categoria" />
+  </div>
+  <div class="title">
+    <h2>LISTADO DE PRODUCTOS</h2>
+    <div class="boton">
+      <span>AGREGAR</span>
+      <a href="/product/create"
+        ><button><i class="fa-solid fa-plus"></i></button
+      ></a>
+    </div>
+  </div>
+  <Table>
+    <tr>
+      <th>ID</th>
+      <th>Código</th>
+      <th>Nombre del producto</th>
+      <th>Categoría</th>
+    </tr>
+    <% productos.forEach( producto =>{ %>
+    <tr>
+      <td><%= producto.id %></td>
+      <td><%= producto.codigo %></td>
+      <td><%= producto.name %></td>
+      <% categorias.forEach(categoria=>{ if (categoria.id === producto.categoria_id){ %>
+      <td><%= categoria.name %></td>
+    <% }}) %>
+      <td>
+        <a href="/product/edit/<%= producto.id %>"><i class="fa-solid fa-pen"></i></a>
+        <form
+          action="/product/<%= producto.id %>?_method=DELETE"
+          style="display: inline-block"
+          class="form-delete"
+          method="post">
+          <button type="submit" class="btn"><i class="fa-solid fa-trash-can"></i></button>
+        </form>
+      </td>
+    </tr>
+    <% }) %>
+  </Table>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+<script>
+  document.addEventListener("submit", (e) => {
+    if (e.target.classList.contains("form-delete")) {
+      e.preventDefault();
+      Swal.fire({
+        icon: "warning",
+        title: "¿Estás seguro?",
+        text: "Estás a punto de eliminar este producto del carrito",
+        showCancelButton: true,
+        confirmButtonText: "Sí, eliminar",
+        cancelButtonText: "Cancelar",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          e.target.submit();
+        }
+      });
+    }
+  });
+</script>
