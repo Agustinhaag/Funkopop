@@ -60,6 +60,9 @@ margin: 65px 0 0 0;
     border: none;
     color: white;
 }
+.oscuro:hover{
+    background: black;
+}
 .section .containeritem .container-text .contenedor-btn .btn_carrito{
     width: 140px;
     text-decoration: none;
@@ -69,6 +72,11 @@ margin: 65px 0 0 0;
     height:26px ;
     margin:0 0 4% 2%;
     cursor: pointer;
+}
+.section .containeritem .container-text .contenedor-btn .btn_carrito:hover{
+    background: none;
+    border: 1px solid #FF3333;
+    color: #FF3333;
 }
 .section .containeritem .container-text .parrafo-dos{
     color: #1D84B5;

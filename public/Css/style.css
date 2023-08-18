@@ -119,6 +119,22 @@ footer .container-img-footer a img {
   padding-bottom: 1%;
 }
 
+.container-inicio{
+  display: flex;
+  padding-top: 100px;
+  align-items: center;
+  min-height:60vh ;
+  justify-content: center;
+}
+.container-inicio img{
+  width: 200px;
+}
+.container-inicio h1{
+  font-size: 40px;
+}
+.container-inicio h1:hover{
+  color: #FF3333;
+}
 @media (max-width: 768px) {
   .mostrar,
   .ocultar {

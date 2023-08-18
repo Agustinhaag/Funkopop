@@ -74,13 +74,13 @@ main .form form .container-check .check label input{
 }
 .catalogo .container-carrusel .carrusel{
     background: #ffffff;
-   
      text-align: center;
     width: 30%;
     margin: 40px 0 0 2%;
 }
 .catalogo .container-carrusel .carrusel .cartel{
     position: relative;
+    width: 100%;
     }
     .catalogo .container-carrusel .carrusel .cartel p{
         position: absolute;
@@ -99,6 +99,7 @@ main .form form .container-check .check label input{
     text-align: left;
     padding:3% 0% 3% 1%;
     color: #333333;
+    min-width:45px ;
 }
 .catalogo .container-carrusel .carrusel .name{
     font-size: 1em;
@@ -179,12 +180,21 @@ main .botones .btn-click{
         flex-direction: column;
     }
     .catalogo .container-carrusel .carrusel{
-        margin-top: 5%;
+        margin-top: 10%;
+        width:50% ;
     }
     .catalogo .container-carrusel .carrusel img{
+        margin-top: 15px;
         width: 150px;
     }
     .catalogo .container-carrusel .carrusel .title-cash, .catalogo .container-carrusel .carrusel .name, .catalogo .container-carrusel .carrusel .cuotas{
         text-align: center;
+    }
+    .catalogo .container-carrusel .carrusel .container-info{
+        flex-direction: column;
+        text-align: center;
+    }
+    .catalogo .container-carrusel .carrusel .container-info p{
+        margin: 0 0 10px 0;
     }
 }

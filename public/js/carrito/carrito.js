@@ -3,10 +3,11 @@ import { carritoProductos } from "./index.js";
 const tbody = document.querySelector("#tbody");
 const tfoot = document.querySelector("#tfoot");
 
-const retornarTabla = (producto) => {
+
+const retornarTabla = (producto) => { 
   const cantidad = carritoProductos.reduce((total, item) => {
     if (item.id === producto.id) {
-      return total + item.cantidad;
+      return total + item.cantidad ;
     } else {
       return total;
     }
@@ -20,7 +21,6 @@ const retornarTabla = (producto) => {
                 </tr>
   `;
 };
-
 
 const mostrar = () => {
   tbody.innerHTML = "";

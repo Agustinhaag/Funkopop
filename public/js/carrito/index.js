@@ -1,3 +1,4 @@
+
 const productos = [];
 
 const obtenerProductos = () => {
@@ -27,7 +28,7 @@ const activarClick = () => {
 
 activarClick();
 
-const agregarCarrito = (id) => {
+  const agregarCarrito = (id) => {
   if (parseInt(id) > 0) {
     const product = productos.find((produc) => produc.id === id);
     const agregado = carritoProductos.find((item) => item.id === id);
@@ -39,6 +40,7 @@ const agregarCarrito = (id) => {
     }
   }
   almacenarProductos();
+  return carritoProductos
 };
 
 const almacenarProductos = () => {
