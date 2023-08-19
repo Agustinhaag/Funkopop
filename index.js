@@ -37,6 +37,9 @@ app.use("/shop", shopRoute);
 const itemRoute = require("./src/route/itemRoute.js");
 app.use("/item", itemRoute);
 
+const contactRoute = require("./src/route/contactRoute.js")
+app.use("/contact", contactRoute);
+
 app.get("/", (req, res) => {
   res.render("index", {
     layout: "layout/index.ejs",

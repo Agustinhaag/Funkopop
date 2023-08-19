@@ -1,0 +1,98 @@
+main{
+     padding: 100px 0 40px 0;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 46%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: rgb(240, 239, 239);
+    padding: 20px 0;
+}
+.main h2{
+    border-bottom: 2px solid #FF3333;
+}
+.main .container-contact{
+    width: 80%;
+    margin: 0 auto
+}
+.main .container-contact form .container-info  {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+}
+.main .container-contact form .container-info .container-input{
+   display: flex;
+margin: 10px auto;
+width: 80%;
+}
+.main .container-contact form .container-info .container-input label{
+    min-width: 15%;
+    margin-right: 15px;
+}
+input, textarea{
+      width: 85%;
+      outline: none;
+      border: none;
+}
+textarea{
+    height: 20vh;
+ resize: none;
+}
+.main .container-contact form .container-info .container-btn{
+    width: 100%;
+   justify-content: center;
+    display: flex;
+}
+.main .container-contact form .container-info .container-btn button{
+    background: none;
+    border: 1px solid #FF3333;
+    color: #FF3333;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 3px 20px;
+}
+.main .container-contact form .container-info .container-btn button:hover{
+    background:#FF3333 ;
+    color: white;
+    cursor: pointer;
+}
+.container-sucess{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 40vh;
+    height: 100%;
+    justify-content: center;
+}
+.container-sucess h2{
+    margin-bottom: 25px;
+}
+.container-sucess .container-description{
+    width: 37%;
+    margin-top: 30px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+.container-description p{
+    border-bottom: 1px solid #FF3333;
+}
+@media(max-width:768px) {
+    .main{
+        min-width: 280px;
+    }
+.main .container-contact form .container-info .container-input{
+    flex-direction: column;
+}
+input,textarea{
+    min-width: 190px;
+}
+}
