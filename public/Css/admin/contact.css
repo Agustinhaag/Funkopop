@@ -26,6 +26,7 @@ justify-content: flex-end;
 }
 .main .container-contact form .container-info .container-input{
    display: flex;
+   flex-direction: column;
 margin: 10px auto;
 width: 80%;
 }
@@ -41,6 +42,14 @@ input, textarea{
 textarea{
     height: 20vh;
  resize: none;
+}
+.main .container-contact form .container-info .container-input .textarea-error{
+    border: 1px solid #dc3545;
+}
+.main .container-contact form .container-info .container-input .textarea-error-msg{
+    color: #dc3545; 
+  font-size: 12px; 
+  margin-top: 4px;
 }
 .main .container-contact form .container-info .container-btn{
     width: 100%;

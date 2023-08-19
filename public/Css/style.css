@@ -41,8 +41,7 @@ nav .img-nav img {
   width: 250px;
   position: relative;
 }
-.mostrar,
-.ocultar {
+.mostrar, .ocultar {
   cursor: pointer;
   display: none;
   transition: 0.4s;
@@ -136,8 +135,7 @@ footer .container-img-footer a img {
   color: #FF3333;
 }
 @media (max-width: 768px) {
-  .mostrar,
-  .ocultar {
+  .mostrar, .ocultar {
     display: block;
     color: white;
     font-size: 25px;

@@ -4,6 +4,7 @@ const { validationResult } = require("express-validator");
 const contact = (req, res) => {
   res.render("contact/contact.ejs", {
     values: {},
+    errors:[],
     layout: "layout/private.ejs",
   });
 };
@@ -22,9 +23,11 @@ const postContact = async (req, res) => {
       errors: errors.array(),
       layout: "layout/private.ejs",
     });
+    console.log(errors);
   } else {
     const result = await service.postEmail(req.body);
     res.redirect("/contact/sucess");
+    
   }
 };
 

@@ -12,7 +12,14 @@ const validarContact = [
     .withMessage("El campo teléfono no puede estar vacío"),
   body("message")
     .notEmpty()
-    .withMessage("El campo mensaje no puede estar vacío"),
+    .withMessage("El campo mensaje no puede estar vacío")
+    .bail()
+    .custom(value => {
+      if (value.trim() === '') {
+        throw new Error('El campo mensaje no puede contener solo espacios en blanco');
+      }
+      return true
+    }),
 ];
 
 route.get("/", contactController.contact);
