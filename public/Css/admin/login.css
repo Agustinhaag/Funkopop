@@ -1,62 +1,68 @@
 main{
-    height: 50vh;
-    text-align: center; 
-    margin-top: 143px;
+    padding-top: 100px;
 }
-main h2{
-    margin-bottom: 12px;
-    color: #1F1F1F;
-    font-size: 21px;
-    font-weight: 600;
-    font-family: 'Raleway', sans-serif;
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 46%;
+    margin: 0 auto;
+    padding: 20px 0;
+    min-width: 320px;
 }
-main form{
-    margin: 27px;
+.main h2{
+    font-size: 28px;
+    margin-bottom: 30px;
 }
-main form label{
+.main .container-formulario{
+    width: 80%;
+    margin: 0 auto;
+}
+.main .container-formulario form .container-info  {
+width: 100%;
 display: flex;
 flex-direction: column;
-margin-bottom: 15px;
+justify-content: flex-end;
 }
-main form input{
-    border: none;
-    margin-left: 18px;
-    font-weight: 300;
-    outline: none;
-    border-bottom: 1px solid #FF3333;
+.main .container-formulario form .container-info .parent{
+   display: flex;
+   flex-direction: column;
+margin: 10px auto;
+width: 80%;
 }
-main form .uno{
-    margin-left: 62px;
+.main .container-formulario form .container-info .parent label{
+    min-width: 15%;
+    margin-right: 15px;
+}
+.main .container-formulario .container-enlace {
+    display: flex;
+    width: 100%;
+justify-content: center;
 }
 main form .container-btn{
-    margin: 34px 0 20px 0;
+    min-width: 43%;
+    margin: 34px auto 20px auto;
     font-size: 14px;
-    color: #1F1F1F;
     display: flex;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 main form .container-btn button{
-    margin-right:1.5% ;
     background: #FF3333;
     border: none;
     color: white;
-    width: 85px;
-    height: 32px;
-    cursor: pointer;
+    padding: 5px 17px;
+    margin-right: 5px;
 }
 main form .container-btn button:hover{
-    background: rgb(255, 38, 0);
+    background: rgb(255, 255, 255);
+    border: 1px solid #FF3333;
+     cursor: pointer;
+     color: #FF3333;
 }
-main form .container-btn input{
+main form .container-btn .container-check input{
     margin-right: 9px;
     cursor: pointer;
-    margin-bottom: 1px;
-}
-main form .container-btn span{
-    margin-top: 8px;
-    font-weight: 300;
 }
 main > a{
     text-decoration: none;
@@ -73,12 +79,15 @@ main .register{
 main .register a{
     margin-left: 9px;
 }
-@media(max-width:450px){
-    .container-menu a{
-    font-size: 13px;
-    }
-    main h2{
+@media(max-width:768px){
+    .main h2{
         font-size: 20px;
+    }
+    main form .container-btn{
+        flex-direction: column;
+    }
+    main form .container-btn button{
+        margin-bottom: 20px;
     }
 }
 

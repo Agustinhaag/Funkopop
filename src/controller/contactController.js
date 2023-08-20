@@ -23,7 +23,6 @@ const postContact = async (req, res) => {
       errors: errors.array(),
       layout: "layout/private.ejs",
     });
-    console.log(errors);
   } else {
     const result = await service.postEmail(req.body);
     res.redirect("/contact/sucess");

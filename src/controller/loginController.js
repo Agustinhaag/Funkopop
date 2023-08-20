@@ -18,12 +18,12 @@ const createRegister = async (req, res) => {
 };
 
 const login = (req, res) => {
-  res.render("login/login.ejs", (values = { values: {} }));
+  res.render("login/login.ejs", { values: {} });
 };
 
 const postLogin = async (req, res) => {
   const row = await serviceLogin.postLogin(req);
-  if (row.length==0) {
+  if (row.length == 0) {
     return res.render("login/login.ejs", {
       values: req.body,
       errors: [{ msg: "El email o contraseña son incorrectos" }],
@@ -35,13 +35,13 @@ const postLogin = async (req, res) => {
     });
   } else {
     req.session.user_id = row[0].id;
-    res.redirect("/product"); //aca va redirijir a la tabla administrativa
+    res.redirect("/product");
   }
 };
 
 const logout = (req, res) => {
   req.session = null;
-  res.redirect("/");  
+  res.redirect("/");
 };
 
 module.exports = {
