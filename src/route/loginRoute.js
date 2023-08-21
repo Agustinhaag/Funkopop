@@ -6,7 +6,7 @@ const controller = require("../controller/loginController.js");
 
 const validarRegister = [
   body("name").notEmpty().withMessage("El campo nombre no puede estar vacio"),
-  body("apellido")
+  body("surname")
     .notEmpty()
     .withMessage("El campo apellido no puede estar vacio"),
   body("email")
@@ -34,9 +34,9 @@ const validarRegister = [
       minUppercase: 1,
       minLowercase: 1,
     })
-    .withMessage("la contraseña debe tener...")
+    .withMessage("La contraseña debe tener al menos 8 caracteres: una minúscula, una mayúscula, un número y un carácter especial")
     .bail()
-    .custom((value, { req }) => value === req.body.password2) //aca comparamos si la primer password (value) es igual a la segunda
+    .custom((value, { req }) => value === req.body.password2) 
     .withMessage("Las contraseñas no coinciden"),
   body("check")
     .notEmpty()

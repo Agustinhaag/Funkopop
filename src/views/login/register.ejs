@@ -1,70 +1,104 @@
 <link rel="stylesheet" href="Css/admin/register.css">
 <title>Registro</title>
 
-<%if( typeof errors != "undefined"){ errors.forEach(error=>{ %>     
+<!-- <%if( typeof errors != "undefined"){ errors.forEach(error=>{ %>     
 <div class="alert alert-danger alert-dismissible fade show" role="alert">  
   <%= error.msg %>                                                        
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
-<% })} %>
+<% })} %> -->
 
  <main>
-      <h2>CREA TU CUENTA</h2>
+  <section class="main">
+    <h2>CREA TU CUENTA</h2>
       <p>Completa el formulario para ser parte del mundo de los Funkos</p>
       <form id="form" action="/register" method="post">
         <div class="container-input">
           <div class="parent">
-            <label for=""></label>Nombre:
-            <input id="name" name="name" value="<%=values.name%>" placeholder="Juan" class="uno" type="text" />
-            <div class="input"></div>
+            <label for="name">Nombre:</label>
+            <input id="name" name="name" value="<%=values.name%>" placeholder="Juan" class=" form-control <%= typeof errors !== 'undefined' ? 'is-invalid' : '' %>" type="text" />
+              <% if (typeof errors !== "undefined") { %>
+                                <% const nameError = errors.find(error => error.path === 'name'); %>
+                                <div class="invalid-feedback">
+                                   <%= nameError ? nameError.msg : '' %>
+                                </div>
+                            <% } %>
           </div>
           <div class="parent">
-            <label for=""></label>Apellido:
-            <input id="surname" name="apellido" value="<%=values.apellido%>" placeholder="Perez" class="dos" type="text" />
-            <div class="input"></div>
+            <label for="surname">Apellido:</label>
+            <input id="surname" name="surname" value="<%=values.apellido%>" placeholder="Perez" class=" form-control <%= typeof errors !== 'undefined' ? 'is-invalid' : '' %>" type="text" />
+              <% if (typeof errors !== "undefined") { %>
+                                <% const surnameError = errors.find(error => error.path === 'surname'); %>
+                                <div class="invalid-feedback">
+                                   <%= surnameError ? surnameError.msg : '' %>
+                                </div>
+                            <% } %>
           </div>
           <div class="parent">
-            <label for=""></label>Email:
+            <label for="email">Email:</label>
             <input
-              id="user"
+              id="email"
               name="email"
               placeholder="juanperez@gmail.com"
-              class="tres"
+              class=" form-control <%= typeof errors !== 'undefined' ? 'is-invalid' : '' %>"
               type="email"
               value="<%=values.email%>"
             />
-            <div class="input"></div>
+              <% if (typeof errors !== "undefined") { %>
+                                <% const emailError = errors.find(error => error.path === 'email'); %>
+                                <div class="invalid-feedback">
+                                   <%= emailError ? emailError.msg : '' %>
+                                </div>
+                            <% } %>
           </div>
           <div class="parent">
-            <label for=""></label>Contraseña:
+            <label for="password">Contraseña:</label>
             <input
               id="password"
               name="password"
               placeholder="*******"
-              class="cuatro"
+              class=" form-control <%= typeof errors !== 'undefined' ? 'is-invalid' : '' %>"
               type="password"
             />
-            <div class="input"></div>
+              <% if (typeof errors !== "undefined") { %>
+                                <% const passwordError = errors.find(error => error.path === 'password'); %>
+                                <div class="invalid-feedback">
+                                   <%= passwordError ? passwordError.msg : '' %>
+                                </div>
+                            <% } %>
           </div>
           <div class="parent">
-            <label for=""></label>Repita Contraseña:
+            <label for="password2">Repita Contraseña:</label>
             <input
               id="password2"
               name="password2"
               placeholder="*******"
-              class="cinco"
+              class=" form-control <%= typeof errors !== 'undefined' ? 'is-invalid' : '' %>"
               type="password"
             />
-            <div class="input"></div>
+              <% if (typeof errors !== "undefined") { %>
+                                <% const passwordError = errors.find(error => error.path === 'password'); %>
+                                <div class="invalid-feedback">
+                                   <%= passwordError ? passwordError.msg : '' %>
+                                </div>
+                            <% } %>
           </div>
         </div>
         <div class="btn">
           <button type="submit">Registrar</button>
-          <div class="parent">
-            <input type="checkbox" name="check" id="check" /><span>
+          <div class="check">
+            <div class="container-check <%= typeof errors !== 'undefined' ? 'is-invalid' : '' %>">
+            <input type="checkbox" name="check" id="check"/><span>
               Acepto<a href="#">Términos y Condiciones</a></span>
-            <div class="input"></div>
+            </div>  
+               <% if (typeof errors !== "undefined") { %>
+                                <% const checkError = errors.find(error => error.path === 'check'); %>
+                                <div class="invalid-feedback">
+                                   <%= checkError ? checkError.msg : '' %>
+                                </div>
+                            <% } %>
           </div>
         </div>
       </form>
+  </section>
     </main>
