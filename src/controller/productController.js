@@ -32,6 +32,7 @@ const edit = async (req, res) => {
   res.render("product/edit", {
     values: productos,
     categorias,
+    errors:[]
   });
 };
 

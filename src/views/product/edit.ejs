@@ -1,19 +1,9 @@
 
 
 <title>Edit</title>
-<link rel="stylesheet" href="Css/admin/edit.css"/>
+<link rel="stylesheet" href="Css/admin/create.css"/>
   <main class="dimensiones">
-    <%if( typeof errors != "undefined"){ errors.forEach(error=>{ %>
-<div class="alert alert-danger alert-dismissible fade show" role="alert">
-  <%= error.msg %>
-  <button
-    type="button"
-    class="btn-close"
-    data-bs-dismiss="alert"
-    aria-label="Close"
-  ></button>
-</div>
-<% })} %>
+  
     <h1>EDITAR ITEM</h1>
     <form id="form" action="/product?_method=PUT" method="post" enctype="multipart/form-data">
       <input type="hidden" name="id" value="<%= values.id %>">
@@ -21,13 +11,18 @@
         <div class="grupo1">
           <div class="parent">
             <span>Categoría:</span>
-            <select name="categoria_id" id="categoria">
+            <select name="categoria_id" id="categoria" class=" form-control  <%= errors && errors.find(error => error.path === 'categoria_id') ? 'is-invalid' : '' %>">
               <option value=""></option>
               <% categorias.forEach(categoria=>{ %>
       <option value="<%= categoria.id %>" <%= values.categoria_id==categoria.id ? 'selected' : '' %> > <%=categoria.name %> </option>
       <% }) %>
             </select>
-            <div class="input"></div>
+              <% if (typeof errors !== "undefined") { %>
+                                <% const categoria_idError = errors.find(error => error.path === 'categoria_id'); %>
+                                <div class="textarea-error-msg">
+                                   <%= categoria_idError ? categoria_idError.msg : '' %>
+                                </div>
+                            <% } %>
           </div>
         </div>
         <div class="grupo1">
@@ -38,7 +33,6 @@
               <option value="">Extendida</option>
               <option value="">Comercial</option>
             </select>
-            <div class="input"></div>
           </div>
         </div>
       </div>
@@ -50,9 +44,15 @@
             id="name"
             placeholder="Kakashi Hatake Shippuden Saga"
             name="name"
+            class=" form-control  <%= errors && errors.find(error => error.path === 'name') ? 'is-invalid' : '' %>"
             value="<%=values.name%>"
           />
-          <div class="input"></div>
+  <% if (typeof errors !== "undefined") { %>
+                                <% const nameError = errors.find(error => error.path === 'name'); %>
+                                <div class="invalid-feedback">
+                                   <%= nameError ? nameError.msg : '' %>
+                                </div>
+                            <% } %>
         </div>
       </div>
       <div class="text-area">
@@ -61,28 +61,41 @@
             name="descripcion"
             placeholder="Descripción del producto"
             id="descripcion"
+            class="form-control   <%= errors && errors.find(error => error.path === 'descripcion') ? 'is-invalid' : '' %>"
             cols="30"
             rows="10"
           ><%=values.descripcion%></textarea>
-          <div class="input"></div>
-
+           <% if (typeof errors !== "undefined") { %>
+                                <% const descripcionError = errors.find(error => error.path === 'descripcion'); %>
+                                <div class="textarea-error-msg">
+                                   <%= descripcionError ? descripcionError.msg : '' %>
+                                </div>
+                            <% } %>
         </div>
       </div>
       <div class="contenedor-grupo">
         <div class="grupo2">
           <div class="parent">
             <span>SKU</span>
-            <input placeholder="SSK111AB001" id="sku" value="<%=values.codigo%>" name="codigo" type="text" />
-            <div class="input"></div>
-
+            <input placeholder="SSK111AB001" id="sku" class=" form-control  <%= errors && errors.find(error => error.path === 'codigo') ? 'is-invalid' : '' %>" value="<%=values.codigo%>" name="codigo" type="text" />
+                <% if (typeof errors !== "undefined") { %>
+                                <% const codigoError = errors.find(error => error.path === 'codigo'); %>
+                                <div class="invalid-feedback">
+                                   <%= codigoError ? codigoError.msg : '' %>
+                                </div>
+                            <% } %>
           </div>
         </div>
         <div class="grupo2">
           <div class="parent">
             <span>Precio</span>
-            <input placeholder="$ 0.000,00" value="<%=values.precio%>" name="precio" id="precio" type="text" />
-            <div class="input"></div>
-      
+            <input placeholder="$ 0.000,00" class=" form-control  <%= errors && errors.find(error => error.path === 'precio') ? 'is-invalid' : '' %>" value="<%=values.precio%>" name="precio" id="precio" type="text" />
+            <% if (typeof errors !== "undefined") { %>
+                                <% const precioError = errors.find(error => error.path === 'precio'); %>
+                                <div class="invalid-feedback">
+                                   <%= precioError ? precioError.msg : '' %>
+                                </div>
+                            <% } %>
           </div>
         </div>
         <div class="grupo2">

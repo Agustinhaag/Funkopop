@@ -107,6 +107,23 @@ main .contenedor-img{
     margin-bottom: 2.5%;
     font-weight: 600;
 }
+main .contenedor-img input {
+  outline: none;
+}
+main .contenedor-muestra {
+  margin-bottom: 2.5%;
+  display: flex;
+}
+main .contenedor-muestra .img {
+  margin-right: 25px;
+  text-align: center;
+}
+main .contenedor-muestra .img img {
+  width: 100px;
+}
+main .contenedor-muestra .img p {
+  border-top: 1px solid #ff3333;
+}
 main .btn {
   padding: 0;
   display: flex;
@@ -123,9 +140,6 @@ main .btn button{
 main .btn button:hover{
     background: #f70000;
     cursor: pointer;
-}
- .textarea-error{
-    border: 1px solid #dc3545;
 }
 .textarea-error-msg{
     color: #dc3545; 
