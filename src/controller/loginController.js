@@ -3,7 +3,7 @@ const { validationResult } = require("express-validator");
 const serviceLogin = require("../service/loginService.js");
 
 const register = (req, res) => {
-  res.render("login/register.ejs", { values: {} });
+  res.render("login/register.ejs", { values: {}, errors:[] });
 };
 const createRegister = async (req, res) => {
   const errors = validationResult(req);

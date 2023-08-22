@@ -1,13 +1,5 @@
 <link rel="stylesheet" href="Css/admin/register.css">
 <title>Registro</title>
-
-<!-- <%if( typeof errors != "undefined"){ errors.forEach(error=>{ %>     
-<div class="alert alert-danger alert-dismissible fade show" role="alert">  
-  <%= error.msg %>                                                        
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-<% })} %> -->
-
  <main>
   <section class="main">
     <h2>CREA TU CUENTA</h2>
@@ -16,7 +8,7 @@
         <div class="container-input">
           <div class="parent">
             <label for="name">Nombre:</label>
-            <input id="name" name="name" value="<%=values.name%>" placeholder="Juan" class=" form-control <%= typeof errors !== 'undefined' ? 'is-invalid' : '' %>" type="text" />
+            <input id="name" name="name" value="<%=values.name%>" placeholder="Juan" class=" form-control  <%= errors && errors.find(error => error.path === 'name') ? 'is-invalid' : '' %>" type="text" />
               <% if (typeof errors !== "undefined") { %>
                                 <% const nameError = errors.find(error => error.path === 'name'); %>
                                 <div class="invalid-feedback">
@@ -26,7 +18,8 @@
           </div>
           <div class="parent">
             <label for="surname">Apellido:</label>
-            <input id="surname" name="surname" value="<%=values.apellido%>" placeholder="Perez" class=" form-control <%= typeof errors !== 'undefined' ? 'is-invalid' : '' %>" type="text" />
+            <input id="surname" name="surname" value="<%=values.apellido%>" placeholder="Perez" class="form-control <%= errors && errors.find(error => error.path === 'surname') ? 'is-invalid' : '' %>"
+ type="text" />
               <% if (typeof errors !== "undefined") { %>
                                 <% const surnameError = errors.find(error => error.path === 'surname'); %>
                                 <div class="invalid-feedback">
@@ -40,7 +33,7 @@
               id="email"
               name="email"
               placeholder="juanperez@gmail.com"
-              class=" form-control <%= typeof errors !== 'undefined' ? 'is-invalid' : '' %>"
+              class=" form-control  <%= errors && errors.find(error => error.path === 'email') ? 'is-invalid' : '' %>"
               type="email"
               value="<%=values.email%>"
             />
@@ -57,7 +50,7 @@
               id="password"
               name="password"
               placeholder="*******"
-              class=" form-control <%= typeof errors !== 'undefined' ? 'is-invalid' : '' %>"
+            class="form-control <%= errors && errors.find(error => error.path === 'password') ? 'is-invalid' : '' %>"
               type="password"
             />
               <% if (typeof errors !== "undefined") { %>
@@ -73,7 +66,7 @@
               id="password2"
               name="password2"
               placeholder="*******"
-              class=" form-control <%= typeof errors !== 'undefined' ? 'is-invalid' : '' %>"
+             class="form-control <%= errors && errors.find(error => error.path === 'password') ? 'is-invalid' : '' %>"
               type="password"
             />
               <% if (typeof errors !== "undefined") { %>

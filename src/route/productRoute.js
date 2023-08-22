@@ -11,13 +11,13 @@ const validarProduct = [
     .withMessage("El campo nombre no puede estar vacio"),
   body("codigo")
     .notEmpty()
-    .withMessage("El campo codigo no puede estar vacio"),
+    .withMessage("El codigo no puede estar vacio"),
   body("categoria_id")
     .notEmpty()
     .withMessage("El campo categoria no puede estar vacio"),
   body("precio")
     .notEmpty()
-    .withMessage("El campo precio no puede estar vacio"),
+    .withMessage("El precio no puede estar vacio"),
   body("descripcion")
     .notEmpty()
     .withMessage("El campo descripcion no puede estar vacio"),

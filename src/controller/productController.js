@@ -3,7 +3,7 @@ const service = require("../service/productService.js");
 
 const create = async (req, res) => {
   const categorias = await service.findAll();
-  res.render("product/create",{values:{}, categorias})
+  res.render("product/create", { values: {}, categorias, errors:[] });
 }
 
 const guardar = async (req, res) => {

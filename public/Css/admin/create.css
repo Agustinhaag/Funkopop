@@ -42,6 +42,7 @@ main .contenedor-input input{
     border: none;
     width: 16.5%;
     outline: none;
+    border-radius: 0;
     border-bottom:  1px solid #FF3333;
 }
 main .text-area{
@@ -66,6 +67,7 @@ main .contenedor-grupo .grupo2 input{
     border-bottom:  1px solid #FF3333;
     width: 49%;
     margin-right: 24%;
+    border-radius: 0;
     outline: none;
 }
 main .contenedor-grupo .grupo2 input::placeholder, main .contenedor-span .grupo3 .descuento{
@@ -122,6 +124,15 @@ main .btn button:hover{
     background: #f70000;
     cursor: pointer;
 }
+ .textarea-error{
+    border: 1px solid #dc3545;
+}
+.textarea-error-msg{
+    color: #dc3545; 
+  font-size: .875em; 
+  margin-top: 4px;
+}
+
 @media(max-width:1100px) {
 .dimensiones{
     margin: 0 0 0 10%;

@@ -30,9 +30,11 @@ justify-content: flex-end;
 margin: 10px auto;
 width: 80%;
 }
-.main .container-formulario form .container-info .parent label{
-    min-width: 15%;
-    margin-right: 15px;
+.main .container-formulario form .container-info .parent input{
+border: none;
+outline: none;
+border-radius: 0;
+border-bottom: 1px solid #FF3333;
 }
 .main .container-formulario .container-enlace {
     display: flex;

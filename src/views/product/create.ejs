@@ -2,30 +2,24 @@
 <title>Crear producto</title>
 <link rel="stylesheet" href="Css/admin/create.css">
 <main class="dimensiones">
-    <%if( typeof errors != "undefined"){ errors.forEach(error=>{ %>
-<div class="alert alert-danger alert-dismissible fade show" role="alert">
-  <%= error.msg %>
-  <button
-    type="button"
-    class="btn-close"
-    data-bs-dismiss="alert"
-    aria-label="Close"
-  ></button>
-</div>
-<% })} %>
         <h1>CREAR NUEVO ITEM</h1>
      <form id="form" action="/product" method="post" enctype="multipart/form-data">   
         <div class="contenedor">
           <div class="grupo1">
             <div class="parent">
                   <span>Categoria:</span>
-                  <select name="categoria_id" id="categoria">
+                  <select name="categoria_id" id="categoria" class=" form-control  <%= errors && errors.find(error => error.path === 'categoria_id') ? 'is-invalid' : '' %>">
                       <option value=""></option>
                      <% categorias.forEach(categoria=>{ %>
-        <option value="<%=categoria.id%>" <%= values.categoria_id==categoria.id ? 'selected' : '' %> > <%=categoria.name %> </option>
-                   <%  }) %>
+    <option value="<%=categoria.id%>" <%= values.categoria_id==categoria.id ? 'selected' : '' %> > <%=categoria.name %> </option> 
+    <%  }) %>
                   </select>
-                  <div class="input"></div>
+                      <% if (typeof errors !== "undefined") { %>
+                                <% const categoria_idError = errors.find(error => error.path === 'categoria_id'); %>
+                                <div class="textarea-error-msg">
+                                   <%= categoria_idError ? categoria_idError.msg : '' %>
+                                </div>
+                            <% } %>
             </div>
           </div>
             <div class="grupo1">
@@ -43,29 +37,49 @@
         <div class="contenedor-input">
           <div class="parent">  
             <span>Nombre del producto:</span>
-            <input type="text" id="name" name="name" value="<%=values.name%>" placeholder="Kakashi Hatake Shippuden Saga">
-            <div class="input"></div>
+            <input type="text" id="name" name="name" class=" form-control  <%= errors && errors.find(error => error.path === 'name') ? 'is-invalid' : '' %>" value="<%=values.name%>" placeholder="Kakashi Hatake Shippuden Saga">
+               <% if (typeof errors !== "undefined") { %>
+                                <% const nameError = errors.find(error => error.path === 'name'); %>
+                                <div class="invalid-feedback">
+                                   <%= nameError ? nameError.msg : '' %>
+                                </div>
+                            <% } %>
           </div>
         </div>
         <div class="text-area">
           <div class="parent">
-            <textarea name="descripcion" placeholder="Descripción del producto" id="descripcion" cols="30" rows="10"><%= values.descripcion %></textarea>
-            <div class="input"></div> 
+            <textarea name="descripcion"   class="form-control   <%= errors && errors.find(error => error.path === 'descripcion') ? 'is-invalid' : '' %>" placeholder="Descripción del producto" id="descripcion" cols="30" rows="10"><%= values.descripcion %></textarea>
+               <% if (typeof errors !== "undefined") { %>
+                                <% const descripcionError = errors.find(error => error.path === 'descripcion'); %>
+                                <div class="textarea-error-msg">
+                                   <%= descripcionError ? descripcionError.msg : '' %>
+                                </div>
+                            <% } %>
           </div>  
         </div>
         <div class="contenedor-grupo">
             <div class="grupo2">
               <div class="parent">  
                 <span>SKU:</span>
-                <input id="sku" placeholder="SSK111AB001" name="codigo" value="<%=values.codigo%>" type="text">
-                <div class="input"></div> 
+                <input id="sku" placeholder="SSK111AB001" name="codigo" class=" form-control  <%= errors && errors.find(error => error.path === 'codigo') ? 'is-invalid' : '' %>" value="<%=values.codigo%>" type="text">
+                   <% if (typeof errors !== "undefined") { %>
+                                <% const codigoError = errors.find(error => error.path === 'codigo'); %>
+                                <div class="invalid-feedback">
+                                   <%= codigoError ? codigoError.msg : '' %>
+                                </div>
+                            <% } %>
               </div>
             </div>
             <div class="grupo2">
               <div class="parent">  
                 <span>Precio:</span>
-                <input id="precio" name="precio" placeholder="$ 0.000,00" value="<%=values.precio%>" type="text">
-                <div class="input"></div> 
+                <input id="precio" name="precio" class=" form-control  <%= errors && errors.find(error => error.path === 'precio') ? 'is-invalid' : '' %>" placeholder="$ 0.000,00" value="<%=values.precio%>" type="text">
+                   <% if (typeof errors !== "undefined") { %>
+                                <% const precioError = errors.find(error => error.path === 'precio'); %>
+                                <div class="invalid-feedback">
+                                   <%= precioError ? precioError.msg : '' %>
+                                </div>
+                            <% } %>
               </div>
             </div>
             <div class="grupo2">
