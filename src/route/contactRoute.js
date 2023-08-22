@@ -9,10 +9,10 @@ const validarContact = [
   body("email").isEmail().withMessage("Ingrese un email válido"),
   body("phone")
     .notEmpty()
-    .withMessage("El campo teléfono no puede estar vacío"),
+    .withMessage("El campo teléfono no puede estar vacio"),
   body("message")
     .notEmpty()
-    .withMessage("El campo mensaje no puede estar vacío")
+    .withMessage("El campo mensaje no puede estar vacio")
     .bail()
     .custom(value => {
       if (value.trim() === '') {
