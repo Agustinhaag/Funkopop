@@ -1,19 +1,24 @@
-document.querySelector("#menos").addEventListener("click", restar);
-document.querySelector("#mas").addEventListener("click", sumar);
+const menos = document.querySelector("#menos")
+const mas = document.querySelector("#mas")
+
+menos.addEventListener("click", restar);
+mas.addEventListener("click", sumar);
+
 let contador = 0;
-let cantidad = document.querySelector("#cantidad");
+ let input = document.querySelector("#cantidad");
 function sumar() {
   contador = contador + 1;
-  cantidad.value = contador;
+  input.value = contador;
 }
 function restar() {
   contador = contador - 1;
-  cantidad.value = contador;
-  if (cantidad.value < 0) {
+  input.value = contador;
+  if (input.value < 0) {
     contador = 0;
-    cantidad.value = 0;
+    input.value = 0;
   }
 }
+
  
 let menu = document.getElementById("menu");
 let mostrar = document.getElementById("mostrar");

@@ -26,6 +26,9 @@ const activarClick = () => {
   }
 };
 
+
+
+
 activarClick();
 
   const agregarCarrito = (id) => {
